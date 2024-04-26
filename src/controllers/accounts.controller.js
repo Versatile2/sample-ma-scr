@@ -22,7 +22,7 @@ const getAll = async function(req, res){
 
 
 const test = async (url) => {
-    const browser = await puppeteer.launch({ headless: false , args: ['--no-sandbox'] })
+    const browser = await puppeteer.launch({ headless: false , args: ['--no-sandbox'] , timeout: 0 })
     const page = await browser.newPage()
 
     await page.goto(url, { waitUntil: 'networkidle0' })
