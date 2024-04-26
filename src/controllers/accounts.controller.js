@@ -16,7 +16,6 @@ const get = function(req, res){
 }
 
 const getAll = async function(req, res){
-    console.log(req, req.body);
     var resuh = await test(`https://www.mister-auto.it/nwsAjax/Plate?captcha_token=${req.body.token}&family_id=0&generic_id=0&category_id=0&locale=it_IT&device=desktop&pageType=homepage&country=IT&lang=it&captchaVersion=v2&plate_selector_vof=&immatriculation=${req.body.plate}`);
     res.send(resuh);
 }
